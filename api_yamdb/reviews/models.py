@@ -7,7 +7,6 @@ from api_yamdb.settings import ADMIN, MODERATOR, USER
 
 from .validators import year_validator
 
-
 CHOICES = (
     (USER, 'Пользователь'),
     (MODERATOR, 'Модератор'),
