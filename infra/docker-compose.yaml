@@ -1,13 +1,17 @@
 version: '3.8'
 services:
+  # описание контейнера db
   db:
+    # образ, из которого должен быть запущен контейнер
     image: postgres:13.0-alpine
+    # volume и связанная с ним директория в контейнере
     volumes:
       - /var/lib/postgresql/data/
+    # адрес файла, где хранятся переменные окружения
     env_file:
       - ./.env
   web:
-    image: aliabis/api_yamdb:one
+    image: aliabis/api_yamdb
     restart: always
     volumes:
       - static_value:/app/static/
