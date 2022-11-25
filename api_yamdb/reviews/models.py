@@ -5,7 +5,6 @@ from django.db import models
 
 from api_yamdb.settings import ADMIN, MODERATOR, USER
 
-# from .validators import validate_year
 from .validators import year_validator
 
 
