@@ -56,7 +56,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-            sudo docker aliabis/yamdb_final
+            sudo docker pull aliabis/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
