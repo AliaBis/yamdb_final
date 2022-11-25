@@ -9,13 +9,13 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from reviews.models import Category, Comment, Genre, Review, Title, User
-from .permissions import (AdminOnly, GetAllPostDeleteAdmin, MeOnly)
-from .permissions import ReviewCommentsPermission
-from .serializers import (CategorySerializer, CommentSerializer)
-from .serializers import (ReviewSerializer, TitleReadSerializer)
-from .serializers import (GenreSerializer, SignupSerializer)
-from .serializers import (TitleWriteSerializer, TokenSerializer)
-from .serializers import UserSerializer
+from .permissions import (AdminOnly, GetAllPostDeleteAdmin, MeOnly,
+                          ReviewCommentsPermission)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          ReviewSerializer, TitleReadSerializer,
+                          GenreSerializer, SignupSerializer,
+                          TitleWriteSerializer, TokenSerializer,
+                          UserSerializer)
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
