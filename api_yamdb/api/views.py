@@ -10,12 +10,18 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
-from .permissions import (AdminOnly, GetAllPostDeleteAdmin, MeOnly,
-                        ReviewCommentsPermission)
-from .serializers import (CategorySerializer, CommentSerializer,
-                        GenreSerializer, ReviewSerializer, SignupSerializer,
-                        TitleReadSerializer, TitleWriteSerializer,
-                        TokenSerializer, UserSerializer)
+from .permissions import (
+    AdminOnly, GetAllPostDeleteAdmin, MeOnly,
+    ReviewCommentsPermission)
+from .serializers import (
+    CategorySerializer, CommentSerializer,
+    ReviewSerializer)
+from .serializers import (
+    GenreSerializer, SignupSerializer,
+    TitleReadSerializer)
+from .serializers import (
+    TitleWriteSerializer, TokenSerializer,
+    UserSerializer)
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -179,7 +185,7 @@ def signup(request):
         send_mail(
             'Код потверджения регистрации в YamDB',
             (f'Вы зарегистрированы под именем {username}, '
-            f'ваш код подтверждения: {confirmation_code}'),
+                f'ваш код подтверждения: {confirmation_code}'),
             'the-third-team@praktikum.fake',
             [email, ],
             fail_silently=False,
