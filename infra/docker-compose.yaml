@@ -11,7 +11,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: aliabis/api_yamdb2
+    image: aliabis/api_yamdb
     restart: always
     volumes:
       - static_value:/app/static/
