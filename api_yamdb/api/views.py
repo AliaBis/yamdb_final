@@ -13,10 +13,10 @@ from reviews.models import Category, Comment, Genre, Review, Title, User
 from .permissions import (AdminOnly, GetAllPostDeleteAdmin, MeOnly,
                           ReviewCommentsPermission)
 from .serializers import (CategorySerializer, CommentSerializer,
-                            ReviewSerializer, TitleReadSerializer,
-                            GenreSerializer, SignupSerializer,
-                            TitleWriteSerializer, TokenSerializer,
-                            UserSerializer)
+                          ReviewSerializer, TitleReadSerializer,
+                          GenreSerializer, SignupSerializer,
+                          TitleWriteSerializer, TokenSerializer,
+                          UserSerializer)
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
