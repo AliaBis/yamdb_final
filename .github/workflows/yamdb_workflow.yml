@@ -42,7 +42,7 @@ jobs:
         with:
           push: true
           tags: aliabis/yamdb_final:latest
-          context: ./api_yamdb
+          context: ./api_yamdb2
 
   deploy:
     runs-on: ubuntu-latest
@@ -56,7 +56,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-            sudo docker pull aliabis/api_yamdb
+            sudo docker pull aliabis/api_yamdb2
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
